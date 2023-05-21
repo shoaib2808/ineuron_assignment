@@ -1,0 +1,13 @@
+from urllib.request import urlopen
+page = urlopen('https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json')
+data_json = json.loads(page.read())
+
+attributr=['id','num','name','img','type','height','weight','candy','egg','spawn_chance','avg_spawns','spawn_time','multipliers','weaknesses']
+dic={}
+for i in attributr:
+  temp=[]
+  for j in range(len(df)):
+    temp.append(df.values[j][0][i])
+  dic[i]=temp
+  
+  pd.DataFrame(dic).to_excel()
