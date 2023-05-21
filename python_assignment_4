@@ -1,3 +1,4 @@
 import pandas as pd
 df=pd.read_json("https://data.nasa.gov/resource/y77d-th95.json")
+df=df.drop([':@computed_region_cbhk_fwbd',':@computed_region_nnqa_25f4'],axis=1)
 df.to_csv("/content/sample_data/test.csv")
