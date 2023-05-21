@@ -1,0 +1,8 @@
+s= input("Enter a string ")
+ls = s.split(" ")
+sls = set(ls)
+dic = {}
+for i in sls:
+  dic[i]=ls.count(i)
+
+print(sorted(dic.values())[-1])
