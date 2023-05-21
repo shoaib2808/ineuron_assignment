@@ -1,0 +1,4 @@
+import requests
+import json
+response_API = requests.get("http://api.tvmaze.com/singlesearch/shows?q=westworld&embed=episodes")
+data=response_API.text
